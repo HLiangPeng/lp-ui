@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git add .& git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog-zh"
+    }
+ },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hlp/components": "workspace:*",
+    "@hlp/theme-chalk": "workspace:*",
+    "@hlp/utils": "workspace:*",
+    "typescript": "^4.9.5",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog-zh": "^0.0.2"
+  }
+}
