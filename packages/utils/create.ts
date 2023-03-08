@@ -34,10 +34,12 @@ function createBEM(prefixName: string) {
   }
 }
 
-function createNamespace(name: string) {
+export function createNamespace(name: string) {
   const prefixName = `lp-${name}`
   return createBEM(prefixName)
 }
+
+
 
 // const bem = createNamespace("icon");
 // console.log(bem.b("box"));

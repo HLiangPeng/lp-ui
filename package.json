@@ -12,7 +12,7 @@
     "commitizen": {
       "path": "cz-conventional-changelog-zh"
     }
- },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "commitizen": "^4.3.0",
-    "cz-conventional-changelog-zh": "^0.0.2"
+    "cz-conventional-changelog-zh": "^0.0.2",
+    "unplugin-vue-define-options": "^1.2.3"
   }
 }

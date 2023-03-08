@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  测试
+  <lp-icon :size="50" color="red">这是一个icon</lp-icon>
 </template>
 
 <style scoped>
