@@ -1,0 +1,38 @@
+@use 'config' as *; // 使用import会导致多次引入问题，use只会引一次（私有变量不会被引入）
+@forward 'config'; // 把config的变量再导出
+
+// .lp-button{}
+@mixin b($block) {
+  $B: $namespace+'-'+$block;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+// .lp-button.is-desiabled
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+// &--primary => .lp-button--primary
+@mixin m($modifier) {
+  @at-root {
+    #{&+$modifier-separator+$modifier} {
+      @content;
+    }
+  }
+}
+
+// &__header  => .lp-button__header
+@mixin e($element) {
+  @at-root {
+    #{&+$element-separator+$element} {
+      @content;
+    }
+  }
+}
