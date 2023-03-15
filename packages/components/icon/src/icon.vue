@@ -4,11 +4,10 @@
   </i>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 import { iconProps } from './icon'
 import type { CSSProperties } from 'vue' // css类型
-
 const props = defineProps(iconProps);
 
 defineOptions({
