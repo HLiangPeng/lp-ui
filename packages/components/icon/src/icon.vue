@@ -7,6 +7,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { iconProps } from './icon'
+import type { CSSProperties } from 'vue' // css类型
 
 const props = defineProps(iconProps);
 
@@ -14,11 +15,12 @@ defineOptions({
   name: 'lp-icon'
 })
 
-const style = computed(() => {
-  if(!props.color && !props.size) return {}
+const style = computed<CSSProperties>((): CSSProperties => {
+  const { color, size } = props
+  if(!color && !size) return {}
   return {
-    color: props.color || '',
-    fontSize: props.size ? `${props.size}px` : ''
+    color: color,
+    fontSize: size ?? `${size}px`
   }
 })
 </script>
